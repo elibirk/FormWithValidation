@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/base"
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <!--A relative layout-->
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:fillViewport="true">
+        <!--Our scroll view allows us to scroll through the content-->
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:stretchColumns="1">
+            <!--tables make it easy to place all of our rows-->
+        <RelativeLayout>
+
+            <!--Essentially just [item name] and then [edit text]
+            Linear layouts are used to make sure everything lines up properly-->
+            <LinearLayout
+                android:id="@+id/first_name"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tv_first_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="150dp"
+                    android:textColor="#FFFFFF"
+                    android:text="First Name: " />
+                <EditText
+                    android:id="@+id/et_first_name"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:background="#FFFFFF"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/last_name"
+                android:layout_below="@+id/first_name"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tv_last_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="150dp"
+                    android:textColor="#FFFFFF"
+                    android:text="Last Name: " />
+                <EditText
+                    android:id="@+id/et_last_name"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:background="#FFFFFF"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/phone"
+                android:layout_below="@+id/last_name"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="150dp"
+                    android:textColor="#FFFFFF"
+                    android:text="Phone Number: " />
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:background="#FFFFFF"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/email"
+                android:layout_below="@+id/phone"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="150dp"
+                    android:textColor="#FFFFFF"
+                    android:text="Email Address:" />
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:background="#FFFFFF"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/email2"
+                android:layout_below="@+id/email"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_email2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="150dp"
+                    android:textColor="#FFFFFF"
+                    android:text="Re-enter Email:" />
+                <EditText
+                    android:id="@+id/et_email2"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:background="#FFFFFF"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/username"
+                android:layout_below="@+id/email2"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="150dp"
+                    android:textColor="#FFFFFF"
+                    android:text="Username:" />
+                <EditText
+                    android:id="@+id/et_username"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/password"
+                android:layout_below="@+id/username"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="150dp"
+                    android:textColor="#FFFFFF"
+                    android:text="Password:" />
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:background="#FFFFFF"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/password2"
+                android:layout_below="@+id/password"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_password2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="150dp"
+                    android:textColor="#FFFFFF"
+                    android:text="Re-enter Password:" />
+                <EditText
+                    android:id="@+id/et_password2"
+                    android:layout_width="200dp"
+                    android:inputType="textPassword"
+                    android:background="#FFFFFF"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/gender"
+                android:layout_below="@+id/password2"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="150dp"
+                    android:textColor="#FFFFFF"
+                    android:text="Gender:" />
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:text="M"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:text="F"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:text="Other"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/country"
+                android:layout_below="@+id/gender"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="150dp"
+                    android:textColor="#FFFFFF"
+                    android:text="Country:" />
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="200dp"
+                    android:background="@color/colorPrimary"
+                    android:entries="@array/country_arrays"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/buttons"
+                android:layout_below="@+id/country"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/clear"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:layout_marginRight="10dp"
+                    android:onClick="clearButton"
+                    android:text="Clear"/>
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:onClick="submitButton"
+                    android:text="Submit"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_swap"
+                android:layout_below="@+id/buttons"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/to_other_layout"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:layout_marginRight="10dp"
+                    android:onClick="toLinear"
+                    android:text="Go to Linear"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+        </TableLayout>
+    </ScrollView>
+
+</RelativeLayout>

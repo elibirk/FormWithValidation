@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">CIS472_HW1</string>
+
+    <string-array name="country_arrays">
+        <item>United States</item>
+        <item>United Kingdom</item>
+        <item>Canada</item>
+        <item>Mexico</item>
+        <item>Malaysia</item>
+        <item>Indonesia</item>
+        <item>France</item>
+        <item>Germany</item>
+        <item>Spain</item>
+        <item>Italy</item>
+        <item>Singapore</item>
+        <item>New Zealand</item>
+        <item>India</item>
+        <item>Not Listed</item>
+    </string-array>
+
+    <string-array name="usernames">
+        <item>Bryan</item>
+        <item>John</item>
+        <item>Matt</item>
+        <item>Mike</item>
+    </string-array>
+
+</resources>
